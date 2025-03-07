@@ -13,12 +13,14 @@ const UserContext = createContext({
   contextorganisation: '',
   contextisLoggedIn: false,
   contextQRInfo: '',
+  isSpeaking: false,
   contextSpeaking: '',
   contextSelectedPerson: '',
   contextInterview: '',
   contextimg: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
 
   contextsetEmail: () => {},
+  setIsSpeaking: () => {},
   contextsetId: () => {},
   contextsetinput: () => {},
   contextsetName: () => {},
@@ -36,6 +38,7 @@ const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   const [contextemail, contextsetEmail] = useState('');
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const [contextId, contextsetId] = useState('');
   const [contextinput, contextsetinput] = useState('');
   const [contextname, contextsetName] = useState('');
@@ -52,6 +55,8 @@ export const UserProvider = ({ children }) => {
   const value = {
     contextInterview,
     contextSpeaking,
+    isSpeaking,
+    setIsSpeaking,
     contextsetSpeaking ,
     contextInterviewdeets,
     setcontextInterviewdeets,

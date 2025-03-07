@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from 'framer-motion';
 import MainInput from '@/components/MainInput';
 import PrevCources from '@/components/PrevCources';
@@ -6,7 +7,8 @@ import Footer from '@/components/Footer';
 import { useEffect, useState } from 'react';
 import TrueFocus from '@/components/TrueFocus';
 // import Leaderboard from '@/components/Leaderboard';
-import SplashCursor from '@/components/SplashCursor';
+// import SplashCursor from '@/components/SplashCursor';
+// import ChatAssistant from '@/components/search/ChatAssistant';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -172,10 +174,10 @@ export default function Home() {
     <main className="relative min-h-screen">
       <HeroBackground />
       <FloatingElements />
-      <SplashCursor /> 
-      
+      {/* <SplashCursor />  */}
+
       <div className="flex flex-col">
-        <motion.section 
+        <motion.section
           className="mt-32 relative"
           initial="initial"
           animate="animate"
@@ -267,14 +269,14 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* <motion.section 
+        <motion.section 
           className="mt-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <PrevCources />
-        </motion.section> */}
+        </motion.section>
 
         <motion.section 
           className="mt-20"
@@ -301,6 +303,9 @@ export default function Home() {
           
         </motion.section>
       </div>
+
+      {/* <ChatAssistant /> */}
+
     </main>
   );
 }

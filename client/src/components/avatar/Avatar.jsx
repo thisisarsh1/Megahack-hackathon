@@ -1,8 +1,6 @@
 'use client';
 import { useUserContext } from '@/app/context/Userinfo';
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Volume2, VolumeX, Settings } from 'lucide-react';
 
 const HeroBackground = () => (
   <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -14,14 +12,13 @@ const HeroBackground = () => (
 );
 
 const Avatar = () => {
-  const { setcontextInterview,contextInterview,contextsetSpeaking } = useUserContext(); // Updated hook
+  const { setcontextInterview,contextInterview,contextsetSpeaking,isSpeaking,setIsSpeaking} = useUserContext(); // Updated hook
   const [isExpanded, setIsExpanded] = useState(true);
   const [isListening, setIsListening] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('en');
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState('');
-  const [isSpeaking, setIsSpeaking] = useState(false);
   const videoRef = useRef(null);
   const [selectedVoice, setSelectedVoice] = useState(null);
   const [volume, setVolume] = useState(1);

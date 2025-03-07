@@ -9,9 +9,10 @@ import SessionWrapper from '@/components/SessionWrapper'
 import { Toaster } from "@/components/ui/toaster";
 import { UserProvider } from '@/app/context/Userinfo';
 import GetUserInfo from '@/components/GetUserInfo'; 
-import { RoadmapProvider } from "@/app/context/RoadmapContext";  // Import the RoadmapProvider
+import { RoadmapProvider } from "@/app/context/RoadmapContext";
 import { SessionProvider } from 'next-auth/react';
 import { AuthProvider } from './context/AuthContext';
+import ChatAssistant from "@/components/search/ChatAssistant";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -58,6 +59,7 @@ export default function RootLayout({
                       {children}
                       <Analytics />
                     </div>
+                    <ChatAssistant/>
                   </SessionWrapper>
                 </main>
                 <Toaster />
