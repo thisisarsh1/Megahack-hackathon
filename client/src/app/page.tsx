@@ -267,14 +267,14 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section 
+        {/* <motion.section 
           className="mt-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <PrevCources />
-        </motion.section>
+        </motion.section> */}
 
         <motion.section 
           className="mt-20"
