@@ -5,6 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   reactStrictMode: false,  // Disable strict mode for debugging
+  devIndicators: false,
   images: {
     domains: [
       'images.pexels.com',
