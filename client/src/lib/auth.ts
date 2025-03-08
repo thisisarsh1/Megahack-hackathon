@@ -22,7 +22,7 @@ function GetGithubCredentials(){
     const clientId=process.env.GITHUB_ID;
     const clientSecret=process.env.GITHUB_SECRET;
     if(!clientId || clientId.length===0){
-        throw new Error('Github clientId not found');
+        throw new Error('Github clientId not found'); //hooks added
     }
     if(!clientSecret || clientSecret.length===0){
         throw new Error('Github client Secret not found');
